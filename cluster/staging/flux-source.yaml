@@ -1,0 +1,16 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: flux-fundamentals
+  namespace: mroosing
+spec:
+  gitImplementation: go-git
+  interval: 10m0s
+  ref:
+    branch: main
+  secretRef:
+    name: flux-fundamentals
+  timeout: 20s
+  url: https://github.com/mroosing-hypotheekbond/gitops-fundamentals-exercises.git
+
