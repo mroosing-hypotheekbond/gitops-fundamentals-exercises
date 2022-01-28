@@ -3,7 +3,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: podinfo
-  namespace: flux-system
+  namespace: mroosing
 spec:
   serviceAccountName: flux-reconciler
   interval: 10m
