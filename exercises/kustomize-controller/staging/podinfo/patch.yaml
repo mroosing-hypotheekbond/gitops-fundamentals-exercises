@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: podinfo
 spec:
+  replicas: 3
   template:
     spec:
       containers:
@@ -10,3 +11,7 @@ spec:
         env:
           - name: PODINFO_UI_COLOR
             value: "#326ce5"
+  topologySpreadConstraints:
+    - maxSkew: 1
+      topologyKey: "topology.kubernetes.io/zone"
+      
